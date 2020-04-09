@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MoviesDB</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="title_activity_tabbed">MoviesDB</string>
+</resources>

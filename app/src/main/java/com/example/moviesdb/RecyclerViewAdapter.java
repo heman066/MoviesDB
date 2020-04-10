@@ -43,10 +43,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.rating.setText(listItem.getRating());
         holder.language.setText(listItem.getLanguage());
         holder.releasedate.setText(listItem.getReleasedate());
+        if(listItem.getAdult()) {
+            holder.desc.setTextColor(Color.MAGENTA);
+        }
         holder.desc.setText(listItem.getDescription());
-        if(listItem.isAdult())
-            holder.desc.setTextColor(Color.parseColor("#D19FE8"));
-        Picasso.with(context).load(BASE_URL+listItem.getImage()).resize(300,300).into(holder.imageView);
+        Picasso.with(context).load(BASE_URL+listItem.getImage()).into(holder.imageView);
     }
 
     @Override
@@ -57,7 +58,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public class ViewHolder extends RecyclerView.ViewHolder{
         public TextView title,language,releasedate,rating,desc;
         public ImageView imageView;
-        public ProgressBar progressBar;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

@@ -16,7 +16,7 @@ public class ListItems {
         this.description = description;
     }
 
-    public boolean isAdult() {
+    public boolean getAdult() {
         return adult;
     }
 
